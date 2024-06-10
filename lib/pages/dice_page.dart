@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class DicePage extends StatefulWidget {
@@ -71,7 +73,17 @@ class _DicePageState extends State<DicePage> {
                       child: Icon(Icons.arrow_forward_ios),
                       ),
                       ],
-                )
+                ),
+                SizedBox(
+                  height: 16,
+                  ),
+                  ElevatedButton(
+                    onPressed: (){
+                      n=Random().nextInt(6) + 1;
+                      setState(() {});
+                    }, 
+                    child: Text("Random"),
+                    ),
             ],
             ),
             ),
